@@ -16,7 +16,7 @@ const displayElement = document.getElementById('display');
 let parola = prompt('Inserisci una parola').trim();
 
 // # Creo delle variabili di appoggio
-let parolaInversa = '';
+let parolaInversa = invertiParola(parola);
 let lettera = '';
 
 // # Utilizzo while per creare il controllo della parola
@@ -45,10 +45,10 @@ if (parola === parolaInversa) {
 }
 
 // # Creo una funzione per controllare se la parola è palindroma
-function InvertiParola(word) {
+function invertiParola(word) {
     let parolaInversa = '';
 
-    i = word.lenght - 1;
+    let i = word.lenght - 1;
 
     while (i >= 0) {
         parolaInversa += word[i];
