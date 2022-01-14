@@ -16,9 +16,22 @@ Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 const displayElement = document.getElementById('display');
 
 // # Faccio la domanda all'utente
+let scelta = prompt('Scegli pari/dispari').trim();
 let numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
 console.log(numeroUtente);
+console.log(scelta);
 
 // # Genero numero random CPU
 let numeroCpu = Math.floor(Math.random() * 5) + 1;
 console.log(numeroCpu);
+
+// # Sommo i numeri 
+let somma = numeroUtente + numeroCpu;
+console.log(somma);
+
+// # Controllo se la somma è pari o dispari
+if (scelta.value = 'pari') {
+    console.log(scelta);
+} else if (scelta.value = 'dispari') {
+    console.log(scelta);
+}
