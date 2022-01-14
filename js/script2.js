@@ -30,8 +30,8 @@ let somma = numeroUtente + numeroCpu;
 console.log(somma);
 
 // # Controllo se la somma è pari o dispari
-if (scelta.value = 'pari') {
-    console.log(scelta);
-} else if (scelta.value = 'dispari') {
-    console.log(scelta);
+if (scelta.value = 'pari' && (somma % 2 === 0)) {
+    console.log('Hai vinto!');
+} else if (scelta.value = 'dispari' && (somma % 2 !== 0)) {
+    console.log('Ha vinto il PC!');
 }
