@@ -43,3 +43,16 @@ if (parola === parolaInversa) {
     display.innerHTML = ` ${message} non è palindroma`;
     console.log('Ops! La parola non è palindroma!');
 }
+
+// # Creo una funzione per controllare se la parola è palindroma
+function InvertiParola(word) {
+    let parolaInversa = '';
+
+    i = word.lenght - 1;
+
+    while (i >= 0) {
+        parolaInversa += word[i];
+        i--;
+    }
+    return parolaInversa;
+}
