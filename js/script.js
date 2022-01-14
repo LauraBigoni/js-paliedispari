@@ -37,10 +37,10 @@ message = `la parola ${parola}`;
 
 if (parola === parolaInversa) {
     // # Stampo in pagina
-    display.innerHTML = `${message} è palindroma`;
+    displayElement.innerHTML = `${message} è palindroma`;
     console.log('Bravo! La parola è palindroma!');
 } else {
-    display.innerHTML = ` ${message} non è palindroma`;
+    displayElement.innerHTML = ` ${message} non è palindroma`;
     console.log('Ops! La parola non è palindroma!');
 }
 

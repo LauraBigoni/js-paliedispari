@@ -14,6 +14,10 @@ Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 
 // # Recupero gli elementi in pagina
 const displayElement = document.getElementById('display');
+const userNumber = document.getElementById('user-num');
+const cpuNumber = document.getElementById('cpu-num');
+const sommaNumbers = document.getElementById('sum');
+const userChoice = document.getElementById('choice');
 
 // # Faccio la domanda all'utente
 let scelta = prompt('Scegli pari/dispari').trim();
@@ -30,8 +34,18 @@ let somma = numeroUtente + numeroCpu;
 console.log(somma);
 
 // # Controllo se la somma è pari o dispari
+let message = 'Hai vinto!';
 if (scelta.value = 'pari' && (somma % 2 === 0)) {
+    message;
     console.log('Hai vinto!');
 } else if (scelta.value = 'dispari' && (somma % 2 !== 0)) {
+    message = 'Ha vinto il PC!';
     console.log('Ha vinto il PC!');
 }
+
+// # Stampo in pagina
+displayElement.innerHTML = `${message}`; 
+userChoice.innerHTML = `Hai scelto: ${scelta}`;
+userNumber.innerHTML = `User number: ${numeroUtente}`;
+cpuNumber.innerHTML = `CPU number: ${numeroCpu}`;
+sommaNumbers.innerHTML = `La somma è: ${somma}`;
