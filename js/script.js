@@ -33,7 +33,7 @@ while (i >= 0) {
 console.log(parolaInversa);
 
 // # Validazione
-message = `la parola ${parolaInversa}`;
+message = `la parola ${parola}`;
 
 if (parola === parolaInversa) {
     // # Stampo in pagina
