@@ -12,6 +12,18 @@ BONUS:
 Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 */
 
+// # FUNCTIONS
+// # Genero numero random CPU
+const numeroCpu = getRandomNumber(1, 5);
+
+function getRandomNumber(min,max) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    return randomNumber;
+}
+console.log(numeroCpu);
+console.log(numeroCpu);
+
+
 // # Recupero gli elementi in pagina
 const displayElement = document.getElementById('display');
 const userNumber = document.getElementById('user-num');
@@ -20,27 +32,35 @@ const sommaNumbers = document.getElementById('sum');
 const userChoice = document.getElementById('choice');
 
 // # Faccio la domanda all'utente
-let scelta = prompt('Scegli pari/dispari').trim();
-let numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
-console.log(numeroUtente);
-console.log(scelta);
+let scelta = prompt('Scegli pari/dispari').toLowerCase().trim();
+while (scelta !== 'pari' && scelta !== 'dispari') {
+    scelta = prompt('Scegli pari/dispari').toLowerCase().trim();
+}
 
-// # Genero numero random CPU
-let numeroCpu = Math.floor(Math.random() * 5) + 1;
-console.log(numeroCpu);
+let numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
+while (isNaN(numeroUtente) || (numeroUtente > 5) || (numeroUtente < 1)) {
+    numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
+}
+
+console.log(scelta);
+console.log(numeroUtente);
 
 // # Sommo i numeri 
-let somma = numeroUtente + numeroCpu;
+const somma = numeroUtente + numeroCpu;
 console.log(somma);
 
 // # Controllo se la somma è pari o dispari
+function isEven(number) {
+    return number % 2 === 0 ? true : false;
+}
+
 let message = 'Hai vinto!';
-if (scelta.value = 'pari' && (somma % 2 === 0)) {
+if (isEven(somma) && scelta === 'pari' || (!isEven(somma) && scelta === 'dispari' )) {
     message;
     console.log('Hai vinto!');
-} else if (scelta.value = 'dispari' && (somma % 2 !== 0)) {
-    message = 'Ha vinto il PC!';
-    console.log('Ha vinto il PC!');
+} else {
+    message = 'Ha vinto il PC, riprova!';
+    console.log ('Ha vinto il PC, riprova!')
 }
 
 // # Stampo in pagina
